@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block contenido %}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Listado de Usuarios</h6>
+    </div>
+    <div class="card-body">
+		<form action = "" method="POST" class="form-horizontal form-bordered " data-parsley-validate="true"> {% csrf_token %}
+
+			{% for campo in form %}
+					{% bootstrap_field campo label_class="control-label col-md-4 col-sm-4" field_class="col-md-6 col-sm-6" %}
+			{% endfor %}
+
+			<div class="form-group">
+				<label class="control-label col-md-4 col-sm-4"></label>
+				<div class="col-md-6 col-sm-6">
+					<button type="submit" class="btn btn-primary add-gritter-light">
+					{% if modificar %}
+						Modificar 
+					{% else %}
+						Registrar	
+					{% endif %}
+					</button>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+{% endblock %}
