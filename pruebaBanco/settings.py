@@ -25,7 +25,7 @@ SECRET_KEY = 'bwwzfwhwkx4p-27$e9e!hw$e=@e#tr4n+#p76((0*sv$u9)2_v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.natha9404.pythonanywhere.com']
+ALLOWED_HOSTS = []
 LOGIN_URL = reverse_lazy("iniciar_sesion")
 LOGIN_REDIRECT_URL = reverse_lazy("index")
 LOGOUT_REDIRECT_URL = reverse_lazy("iniciar_sesion")
@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Usuarios',
+    'alumnos',
+    'profesores',
+    'materias',
     'bootstrap3',
 ]
 

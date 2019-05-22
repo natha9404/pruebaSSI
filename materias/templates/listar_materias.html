@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block contenido %}
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Listado de Materias</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Profesor</th>
+                        <th>Opciones</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Profesor</th>
+                      <th>Opciones</th>
+
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    {% for materia in object_list %}
+						<tr >
+							<td> {{ materia.nombre }} </td>
+							<td> {{ materia.profesor.nombre }} </td>
+                            <td>
+                                <a href="{% url 'ver_estudiantes' materia.id %}" class="btn btn-default"><i class="fa fa-edit"></i> Ver estudiantes </a>
+</td>
+                        </tr>
+                    {% endfor %} </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+{% endblock %}

@@ -46,9 +46,9 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'crear_usuario' %}">
+        <a class="nav-link" href="{% url 'crear_alumno' %}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Crear Usuario</span></a>
+          <span>Matricular Alumno</span></a>
       </li>
 
       <!-- Divider -->
@@ -56,19 +56,51 @@
       
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'listar_usuarios' %}">
+        <a class="nav-link" href="{% url 'listar_alumnos' %}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Listar Usuarios</span></a>
+          <span>Listar Alumnos</span></a>
+      </li>
+              <!-- Divider -->
+      <hr class="sidebar-divider">
+
+        <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'crear_profesor' %}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Crear Profesor</span></a>
       </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
       
+      <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'cerrar_sesion' %}">
+        <a class="nav-link" href="{% url 'listar_profesors' %}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Cerrar Sesion</span></a>
+          <span>Listar Profesors</span></a>
       </li>
+
+              <!-- Divider -->
+      <hr class="sidebar-divider">
+
+        <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'crear_materia' %}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Crear Materia</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'listar_materias' %}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Listar Materias</span></a>
+      </li>
+
+
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
